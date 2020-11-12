@@ -5,6 +5,7 @@ import viewsDir from "../util/viewsDir";
 import Product from "../model/productModel";
 
 export default {
+  
   getProducts(req: Request, res: Response) {
     Product.fetchAll((products: any) => {
       res.render(path.resolve(viewsDir, "admin/products"), {
