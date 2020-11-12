@@ -1,0 +1,49 @@
+
+.container {
+  margin-top: 32px;
+}
+
+.bg-light {
+  background-color: #03c4a1 !important;
+}
+
+nav .nav-link {
+  font-family: "Goldman", sans-serif;
+  font-size: 1.2rem;
+  color: red;
+  color: #fff8cd !important;
+  transition: 1s color;
+}
+
+nav .nav-link:hover {
+  color: #373a40 !important;
+}
+
+nav .navbar-brand {
+  color: #fff8cd !important;
+  font-family: "Goldman", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+.footer {
+  background-color: #03c4a1 !important;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.card{
+  display: inline-block;
+}

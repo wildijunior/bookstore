@@ -1,0 +1,27 @@
+<%- include("../layouts/header"); -%>
+
+<main class="container">
+
+    <h2>Index View</h2>
+
+    <% if (produtos.length > 0) { %>
+
+    <% produtos.forEach(prods => { %>
+    <div class="card" style="width: 18rem;">
+        <img src="<%= prods.imageURL %> " class="card-img-top" alt="<%= prods.title %> ">
+        <div class="card-body">
+            <h5 class="card-title"><%= prods.title %> </h5>
+            <h5 class="card-title">$ <%= prods.price %> </h5>
+            <p class="card-text"><%= prods.description %></p> </p>
+            <a href="/cart" class="btn btn-primary">Go to Cart</a>
+        </div>
+    </div>
+    <% }) %>
+
+    <% } else { %>
+<h4>No books found</h4>
+    <% } %> 
+
+</main>
+
+<%- include("../layouts/footer"); -%>
