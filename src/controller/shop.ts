@@ -21,6 +21,13 @@ export default {
     });
   },
 
+  getProduct(req: Request, res: Response) {
+    const prodId = req.params.productId;
+    console.log(prodId);
+
+    res.redirect("/");
+  },
+
   getCart(req: Request, res: Response) {
     res.render(path.resolve(viewsDir, "shop/cart"));
   },

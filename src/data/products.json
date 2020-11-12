@@ -1,16 +1,1 @@
-[
-  {
-    "id": "123456",
-    "title": "Um livro",
-    "imageURL": "https://images.unsplash.com/photo-1562527372-00a214490a28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80",
-    "price": "22",
-    "description": "Stranger Things é uma série de televisão americana dos gêneros ficção científica, terror, suspense e drama adolescente criada, escrita e dirigida pelos irmãos Matt e Ross Duffer para a plataforma Netflix. Os irmãos Duffer, Shawn Levy e Dan Cohen são também os produtores executivos."
-  },
-  {
-    "title": "De volta para o futuro",
-    "imageURL": "https://images.unsplash.com/photo-1530981279185-9f0960715267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    "price": "99.99",
-    "description": "Back to the Future é um filme norte-americano de 1985. Foi dirigido por Robert Zemeckis e escrito por Zemeckis e Bob Gale. Estrelado por Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover e Thomas F. Wilson. O filme conta a história de Marty McFly, um adolescente que inevitavelmente volta no tempo até 1955.",
-    "id": "7dbd412d-996a-4ef0-bfc8-01140491178f"
-  }
-]
+[{"title":"De volta para o futuro","imageURL":"https://images.unsplash.com/photo-1530981279185-9f0960715267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80","price":"22","description":"Back to the Future é um filme norte-americano de 1985. Foi dirigido por Robert Zemeckis e escrito por Zemeckis e Bob Gale. Estrelado por Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover e Thomas F. Wilson. O filme conta a história de Marty McFly, um adolescente que inevitavelmente volta no tempo até 1955.","id":"4b2bd0a7-c904-41af-9026-871f55c1e93d"}]
