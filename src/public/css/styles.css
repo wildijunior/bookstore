@@ -47,3 +47,7 @@ h6 {
 .card{
   display: inline-block;
 }
+
+.centered{
+  text-align: center;
+}

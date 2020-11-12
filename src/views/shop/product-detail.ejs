@@ -1,0 +1,28 @@
+<%- include("../layouts/header"); -%>
+
+<main class="container centered">
+
+    <h1>DETAIL PRODUCT VIEW</h1>
+
+    <!-- detalhe do produto -->
+    <hr>
+    <h4><%= prods.title %> </h4>
+    <hr>
+
+    <div>
+        <img src="<%= prods.imageURL %> " alt="<%= prods.title %> " width="50%">
+    </div>
+
+    <h4>$ <%= prods.price %> </h4>
+
+    <p><%= prods.description %> </p>
+
+    <!-- botoes de acao -->
+    <form action="/cart" method="POST">
+        <button class="btn btn-warning"type="submit">Add to Cart</button>
+    </form>
+
+
+</main>
+
+<%- include("../layouts/footer"); -%>

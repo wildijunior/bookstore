@@ -25,10 +25,10 @@ export default {
     const prodId = req.params.productId;
 
     Product.findById(prodId, (product: any) => {
-      console.log(product);
+      res.render(path.resolve(viewsDir, "shop/product-detail"),{
+        prods: product,
+      });
     });
-
-    res.redirect("/");
   },
 
   getCart(req: Request, res: Response) {
