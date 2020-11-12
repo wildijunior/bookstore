@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import path from "path";
 import fs from "fs";
 
@@ -24,12 +24,11 @@ interface IUser {
 }
 
 export default class Products {
-    
   title: string;
   imageURL: string;
   price: number;
   description: string;
-  id:string;
+  id: string;
 
   constructor(user: IUser) {
     this.title = user.title;
@@ -51,5 +50,13 @@ export default class Products {
 
   static fetchAll(cb: any) {
     getProductsFromFile(cb);
+  }
+
+  // load apenas um produto
+  static findById(id: string, cb: any) {
+    getProductsFromFile((products: any) => {
+      const product = products.find((p:any) => p.id === id);
+      cb(product);
+    });
   }
 }
