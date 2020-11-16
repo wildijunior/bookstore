@@ -2,10 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import path from "path";
 import fs from "fs";
 
-// fileDir
-const dataFileDir = path.resolve("src", "data", "products.json");
+const dataFileDir = path.resolve("src/data", "products.json");
 
-// HOOK
+// HOOK para pegar dados do arquivo
 const getProductsFromFile = (cb: any) => {
   fs.readFile(dataFileDir, (err, fileContent) => {
     if (err) {
@@ -16,6 +15,7 @@ const getProductsFromFile = (cb: any) => {
   });
 };
 
+// interface
 interface IUser {
   title: string;
   imageURL: string;
@@ -23,7 +23,7 @@ interface IUser {
   description: string;
 }
 
-export default class Products {
+export default class Product {
   title: string;
   imageURL: string;
   price: number;
@@ -37,7 +37,9 @@ export default class Products {
     this.description = user.description;
   }
 
+  // salva dados inseridos no arquivo em formato array de objetos/json
   save() {
+    // gera id unico para cada produto cadastrado
     this.id = uuidv4();
 
     getProductsFromFile((products: any) => {
@@ -48,14 +50,23 @@ export default class Products {
     });
   }
 
+  // retorna todos os dados
   static fetchAll(cb: any) {
     getProductsFromFile(cb);
   }
 
-  // load apenas um produto
+  // procura produto por id
+  // id - como argumento
+  // callback - que sera executada quando encontrarmos o produto pelo id
   static findById(id: string, cb: any) {
+    // pega array de objetos contendo os produtos
     getProductsFromFile((products: any) => {
-      const product = products.find((p:any) => p.id === id);
+      // filtramos o produto pelo id
+      // produra um id especifico no array de objeto produtos
+      // produra pelo id dentro do array e volta o produto com aquele id
+      // p = produto passado como argumento para verificar id dele com id passado como argumento la em cima
+      const product = products.find((p: any) => p.id === id);
+      // callback que retorna o produto
       cb(product);
     });
   }

@@ -1,14 +1,13 @@
 import { Request, Response } from "express";
 import path from "path";
-import viewsDir from "../util/viewsDir";
 
 import Product from "../model/productModel";
+import Cart from "../model/cartModel";
 
 export default {
-  // index
   index(req: Request, res: Response) {
     Product.fetchAll((products: any) => {
-      res.render(path.resolve(viewsDir, "shop/index"), {
+      res.render(path.resolve("src/views/shop/index"), {
         produtos: products,
       });
     });
@@ -17,7 +16,7 @@ export default {
   // products list
   getProducts(req: Request, res: Response) {
     Product.fetchAll((products: any) => {
-      res.render(path.resolve(viewsDir, "shop/product-list"), {
+      res.render(path.resolve("src/views/shop/product-list"), {
         produtos: products,
       });
     });
@@ -28,24 +27,34 @@ export default {
     const prodId = req.params.productId;
 
     Product.findById(prodId, (product: any) => {
-      res.render(path.resolve(viewsDir, "shop/product-detail"),{
+      res.render(path.resolve("src/views/shop/product-detail"), {
         prods: product,
       });
     });
   },
-
-  // get para /cart
   getCart(req: Request, res: Response) {
-    res.render(path.resolve(viewsDir, "shop/cart"));
+    res.render(path.resolve("src/views/shop/cart"));
   },
 
-  // get para /orders
+  postCart(req: Request, res: Response) {
+    const prodId = req.body.productId;
+    
+    Product.findById(prodId, (product: any) => {
+      Cart.addProduct(prodId, product.price);
+    });
+
+    res.redirect("/cart");
+  },
+
   getOrders(req: Request, res: Response) {
-    res.render(path.resolve(viewsDir, "shop/orders"));
+    res.render(path.resolve("src/views/shop/orders"));
   },
 
-  // get para /checkout
   getCheckout(req: Request, res: Response) {
-    res.render(path.resolve(viewsDir, "shop/checkout"));
+    res.render(path.resolve("src/views/shop/checkout"));
+  },
+
+  getAbout(req: Request, res: Response) {
+    res.render(path.resolve("src/views/shop/about"));
   },
 };

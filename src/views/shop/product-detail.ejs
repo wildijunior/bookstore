@@ -2,7 +2,7 @@
 
 <main class="container centered">
 
-    <h1>DETAIL PRODUCT VIEW</h1>
+    <h1>PRODUCT DETAIL VIEW</h1>
 
     <!-- detalhe do produto -->
     <hr>
@@ -17,10 +17,9 @@
 
     <p><%= prods.description %> </p>
 
-    <!-- botoes de acao -->
-    <form action="/cart" method="POST">
-        <button class="btn btn-warning"type="submit">Add to Cart</button>
-    </form>
+    <!-- post add ejs -->
+    <%- include('../layouts/add-to-cart.ejs', {produtos: prods}); -%>
+
 
 
 </main>

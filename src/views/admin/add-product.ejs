@@ -1,40 +1,39 @@
-<%- include("../layouts/header"); -%>
+<%-include('../layouts/header');-%>
 
-<section class="container">
+<form class="cadastro container" action="/admin/add-product" method="POST">
+    <h3>Adicione um livro</h3>
+    <br />
+    <div class="form-group">
+        <label for="title">
+            <h5>Title</h5>
+        </label>
+        <input class="form-control" type="text" name="title" id="title" placeholder="Title">
+    </div>
 
-    <form action='/admin/add-product' method='POST'>
-        <div class="form-group">
-            <label for="title">
-                <h4>Title</h4>
-            </label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
-        </div>
+    <div class="form-group">
+        <label for="imageURL">
+            <h5>Image URL</h5>
+        </label>
+        <input class="form-control" type="text" name="imageURL" id="imageURL" placeholder="Image URL">
+    </div>
 
-        <div class="form-group">
-            <label for="imageURL">
-                <h4>Image URL</h4>
-            </label>
-            <input type="text" class="form-control" id="imageURL" name="imageURL" placeholder="Image URL">
-        </div>
+    <div class="form-group">
+        <label for="price">
+            <h5>Price</h5>
+        </label>
+        <input class="form-control" type="number" name="price" id="price" placeholder="Price" step="0.01">
+    </div>
 
-        <div class="form-group">
-            <label for="price">
-                <h4>Price</h4>
-            </label>
-            <input type="number" class="form-control" id="price" name="price" placeholder="Title" step="0.01">
-        </div>
+    <div class="form-group">
+        <label for="description">
+            <h5>Descrição</h5>
+        </label>
+        <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrição"></textarea>
+    </div>
 
-        <div class="form-group">
-            <label for="description">
-                <h4>Description</h4>
-            </label>
-            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
-        </div>
+    <button class='btn btn-success' type="submit">Adicionar</button>
 
-        <button class="btn btn-success" type="submit">ADD</button>
+</form>
 
-    </form>
 
-</section>
-
-<%- include("../layouts/footer"); -%>
+<%-include('../layouts/footer');-%>

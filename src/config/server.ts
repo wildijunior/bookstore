@@ -1,22 +1,21 @@
 import express from "express";
-import bodyParser from "body-parser";
-import cssDir from "../util/cssDir";
+import bodyparser from "body-parser";
+import path from "path";
 
 import adminRoutes from "../routes/admin";
 import shopRoutes from "../routes/shop";
-import page404 from "../routes/page404";
+import page404Route from "../routes/page404";
 
 const app = express();
 
 export default () => {
-  
   app.set("view engine", "ejs");
-  app.use(express.static(cssDir));
-  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(express.static(path.resolve("src/public")));
+  app.use(bodyparser.urlencoded({ extended: false }));
 
   app.use("/admin", adminRoutes);
   app.use(shopRoutes);
-  app.use(page404);
+  app.use(page404Route);
 
   return app;
 };

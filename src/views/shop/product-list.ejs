@@ -7,7 +7,7 @@
     <% if (produtos.length > 0) { %>
 
     <% produtos.forEach(prods => { %>
-    <div class="card" style="width: 18rem;">
+    <article class="card" style="width: 18rem;">
         <img src="<%= prods.imageURL %> " class="card-img-top" alt="<%= prods.title %> ">
         <div class="card-body">
             <h5 class="card-title"><%= prods.title %> </h5>
@@ -16,11 +16,12 @@
             
             <!-- botoes de acao -->
             <a href="/products/<%= prods.id %> " class="form-group btn btn-info">Details</a>
-            <form action="/add-to-cart" method="POST">
-                <button class="form-group btn btn-success">Go to Cart</button>
-            </form>
+
+           <!-- post add ejs -->
+           <%- include('../layouts/add-to-cart.ejs'); -%> 
+           
         </div>
-    </div>
+    </article>
     <% }) %>
 
     <% } else { %>

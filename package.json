@@ -1,14 +1,13 @@
 {
-  "name": "bookstore",
+  "name": "livraria",
   "version": "1.0.0",
-  "description": "Lojinha de livro NodeJs, Express, Ejs, TypeScript",
+  "description": "Lijinha de livros",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/app.ts"
   },
   "author": "Wildi Jr",
   "license": "ISC",
   "dependencies": {
-    "@types/uuid": "^8.3.0",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/ejs": "^3.0.5",
-    "@types/express": "^4.17.9"
+    "@types/express": "^4.17.9",
+    "@types/uuid": "^8.3.0"
   }
 }

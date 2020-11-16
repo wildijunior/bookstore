@@ -1,27 +1,41 @@
-
-.container {
-  margin-top: 32px;
+body {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 0.21612394957983194) 35%,
+    rgba(3, 148, 255, 0.4514180672268907) 100%
+  );
 }
 
-.bg-light {
-  background-color: #03c4a1 !important;
+nav {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 20px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 1em rgb(151, 150, 150);
 }
 
 nav .nav-link {
-  font-family: "Goldman", sans-serif;
-  font-size: 1.2rem;
-  color: red;
-  color: #fff8cd !important;
-  transition: 1s color;
+  color: black !important;
+  border-radius: 10px;
+  transition: 1s color, 1.5s background-color;
 }
 
 nav .nav-link:hover {
-  color: #373a40 !important;
+  color: white !important;
+  background: rgb(105, 105, 184);
+  border-radius: 10px;
 }
 
-nav .navbar-brand {
-  color: #fff8cd !important;
-  font-family: "Goldman", sans-serif;
+nav .nav-link:visited {
+  background: rgb(105, 105, 184);
+}
+
+form.cadastro {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 1em rgb(151, 150, 150);
 }
 
 h1,
@@ -34,20 +48,23 @@ h6 {
 }
 
 .footer {
-  background-color: #03c4a1 !important;
-  padding: 10px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  color: white;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
-.card{
+form h3 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.card {
   display: inline-block;
-}
-
-.centered{
-  text-align: center;
+  box-shadow: 0 0 1em rgb(151, 150, 150);
 }
